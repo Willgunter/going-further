@@ -8,6 +8,7 @@ By the end of this lab your team will have:
 - That skeleton committed to your team repository using the branching strategy you agreed in
   Module 12
 - A container every team member can independently build and run from a clean checkout
+- A simple Jenkinsfile that builds and smoke-tests that container through your team's Jenkins job
 
 ## Setup
 
@@ -45,6 +46,18 @@ By the end of this lab your team will have:
     the image themselves, and run it.
 11. Confirm they see the same output, from a completely clean checkout.
 
+### Part E — Add a simple Jenkinsfile
+
+12. As a team, create a `Jenkinsfile` at the root of the repository with three stages:
+    `Checkout`, `Build Image` (runs `docker build`), and `Smoke Test` (runs `docker run --rm`
+    against the image you just built). Base this on the Jenkinsfile syntax from Modules 05, 09,
+    and 10, you don't need anything more complex than that for a skeleton.
+13. Create a Jenkins Pipeline job pointing at your team repository and this `Jenkinsfile`.
+14. Following your team's branching strategy, commit and merge the `Jenkinsfile` into `main`
+    exactly as you did with the skeleton itself in Part C.
+15. Run the job and confirm it goes green: Checkout, Build Image, and Smoke Test should all
+    succeed.
+
 ## Acceptance criteria
 
 - `main` in your team repository contains the skeleton app and a working Dockerfile.
@@ -52,6 +65,8 @@ By the end of this lab your team will have:
   starting from a fresh `git pull` of `main`.
 - Your team can point to the exact commit (or merge) where the skeleton was integrated, and
   explain which branching strategy step they followed to get it there.
+- Your team's Jenkins job runs the `Jenkinsfile` from `main` and completes with all three
+  stages green.
 
 This is the last hands-on lab of Sprint 1. Module 14 wraps up and prepares you for Friday's
 assessment.

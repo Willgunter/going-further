@@ -1,14 +1,15 @@
 # Demo: Module 13 — Containerising the Project Skeleton
 
-**Duration:** 8 minutes
+**Duration:** 12 minutes
 **Prerequisite:** A team repository already set up with a branching strategy (Module 12). Docker
-Desktop running. No new commands beyond Modules 07 and 11.
+Desktop running, and access to the Sprint 1 Jenkins instance. No new commands beyond Modules 07,
+10, and 11.
 
 ## Part 1: Framing the task (1 min)
 
 Narration: like Module 12, there's nothing new to learn here technically. This is Module 11's
-Dockerfile skills and Module 07's branching skills, applied together, on the team repository you
-just created.
+Dockerfile skills, Module 07's branching skills, and Module 10's Jenkinsfile syntax, applied
+together, on the team repository you just created.
 
 ## Part 2: Branch, add the skeleton (3 min)
 
@@ -63,8 +64,43 @@ Narration: the point isn't just "it builds on my machine", it's confirming the w
 reproduce the same containerised skeleton from a clean checkout. That's the property CI (coming
 properly in a later sprint) will eventually verify automatically.
 
+## Part 5: A simple Jenkinsfile for the skeleton (3 min)
+
+Narration: the skeleton is committed and reproducible by hand. The last step is letting Jenkins
+do that reproduction check automatically, the same discipline from Module 09, now applied to the
+team's own repository for the first time.
+
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build Image') {
+            steps {
+                sh 'docker build -t team-skeleton .'
+            }
+        }
+        stage('Smoke Test') {
+            steps {
+                sh 'docker run --rm team-skeleton'
+            }
+        }
+    }
+}
+```
+
+Create a Jenkins Pipeline job pointing at the team repository, commit the `Jenkinsfile` to
+`main` via the team's branching strategy (exactly like Part 3), then click **Build Now** and
+show all three stages going green.
+
 ## Key message
 
 A working, committed, containerised skeleton is the last piece needed before the team starts
-building on top of it. Everything from here on in the programme builds on this same repo, same
-strategy, same container pattern.
+building on top of it, and a Jenkins job that rebuilds and smoke-tests it automatically is what
+turns "it worked when we checked" into something the team can trust on every future change.
+Everything from here on in the programme builds on this same repo, same strategy, same
+container pattern, same pipeline.
