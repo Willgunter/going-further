@@ -34,7 +34,7 @@ guide along with any sample configs or commands, and there may be no `solutions/
 | # | Module | Lab |
 |---|---|---|
 | 3 | Linux Fundamentals for Engineers | [labs/03-linux-fundamentals/README.md](labs/03-linux-fundamentals/README.md) |
-| 4 | PowerShell Basics & Bash Comparison | [labs/04-powershell-basics/README.md](labs/04-powershell-basics/README.md) |
+| 4 | PowerShell Fundamentals | [labs/04-powershell-fundamentals/README.md](labs/04-powershell-fundamentals/README.md) |
 | 5 | Introduction to GenAI in Engineering at Fidelity | [labs/05-genai-awareness/README.md](labs/05-genai-awareness/README.md) |
 | 6 | Git Fundamentals | [labs/06-git-fundamentals/README.md](labs/06-git-fundamentals/README.md) |
 | 7 | Git Branching Strategies | [labs/07-git-branching/README.md](labs/07-git-branching/README.md) |

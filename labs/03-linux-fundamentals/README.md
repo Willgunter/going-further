@@ -20,7 +20,7 @@ By the end of this lab you will have:
 ## Task sheet
 
 Work through each step on the shared Linux host. Keep a note of the command you used for each
-step — you'll repeat the same tasks in PowerShell in Module 4.
+step.
 
 1. **Connect and orient yourself**
    - SSH into the host using the credentials provided.
