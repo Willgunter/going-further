@@ -14,7 +14,7 @@ By the end of this lab you will have:
 - A Windows machine with PowerShell 7+ (or Windows PowerShell 5.1)
 - The [`sample-workspace/`](../../demos/04-powershell-fundamentals/sample-workspace) folder from
   the demo, copied into your own working directory
-- PostgreSQL installed and running as a Windows service (from Module 02)
+- PostgreSQL installed and running as a Windows service
 
 ## Task sheet
 

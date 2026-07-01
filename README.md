@@ -35,7 +35,7 @@ guide along with any sample configs or commands, and there may be no `solutions/
 |---|---|---|
 | 3 | Linux Fundamentals for Engineers | [labs/03-linux-fundamentals/README.md](labs/03-linux-fundamentals/README.md) |
 | 4 | PowerShell Fundamentals | [labs/04-powershell-fundamentals/README.md](labs/04-powershell-fundamentals/README.md) |
-| 5 | Introduction to GenAI in Engineering at Fidelity | [labs/05-genai-awareness/README.md](labs/05-genai-awareness/README.md) |
+| 5 | GitHub Copilot as a Learning Aid | [labs/05-genai-copilot-learning-aid/README.md](labs/05-genai-copilot-learning-aid/README.md) |
 | 6 | Git Fundamentals | [labs/06-git-fundamentals/README.md](labs/06-git-fundamentals/README.md) |
 | 7 | Git Branching Strategies | [labs/07-git-branching/README.md](labs/07-git-branching/README.md) |
 | 8 | GitHub Essentials | [labs/08-github-essentials/README.md](labs/08-github-essentials/README.md) |
