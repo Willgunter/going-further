@@ -1,7 +1,7 @@
-# Fidelity LEAP Program — Sprint 1 Lab Exercises
+# LEAP Program — Sprint 1 Lab Exercises
 
 This repository contains the hands-on lab exercises accompanying **Sprint 1: Orientation,
-Foundational Technologies & AI Tools**, week 1 of the 11-sprint Fidelity LEAP graduate
+Foundational Technologies & AI Tools**, week 1 of the 11-sprint LEAP graduate
 programme.
 
 > **Scope note:** Modules 1 (Program Orientation & Team Formation) and 2 (Development
@@ -16,7 +16,7 @@ programme.
 - Docker Desktop 27.x
 - Access to the Sprint 1 Jenkins instance (Jenkins LTS 2.541.x)
 - IntelliJ IDEA 2025.1
-- Access to Fidelity's approved GenAI tool (see Module 5 for guardrails)
+- Access to your organisation's approved GenAI tool (see Module 5 for guardrails)
 
 ## Structure
 
