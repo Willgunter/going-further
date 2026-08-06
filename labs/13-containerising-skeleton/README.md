@@ -13,7 +13,8 @@ By the end of this lab your team will have:
 ## Setup
 
 - Your team repository from Module 12, with its branching strategy documented
-- Docker Desktop 27.x
+- Access to your Linux Docker host — connect in your preferred way (see Sprint 1 Module 3), and
+  clone your team repository there before starting Part B
 - The [`starter/`](starter) folder from this lab (a minimal "hello world" Java app)
 
 ## Task sheet

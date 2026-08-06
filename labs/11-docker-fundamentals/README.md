@@ -11,8 +11,9 @@ By the end of this lab you will have:
 
 ## Setup
 
-- Docker Desktop 27.x
-- The [`starter/`](starter) folder from this lab, copied to a working location of your choice
+- Access to your Linux Docker host — connect in your preferred way (see Sprint 1 Module 3 if
+  you need a refresher on SSH, or on setting up VS Code Remote Development)
+- The [`starter/`](starter) folder from this lab, cloned or copied onto the Linux host
 - GitHub Copilot Chat in IntelliJ
 - The
   [`unfamiliar-multistage-dockerfile.txt`](../../demos/11-docker-fundamentals/unfamiliar-multistage-dockerfile.txt)
@@ -27,9 +28,10 @@ By the end of this lab you will have:
 3. Write down, in your own words, what a multi-stage build is and why it produces a smaller
    final image than building everything in one stage.
 
-### Part B — Build the app locally
+### Part B — Build the app
 
-4. In `starter/`, run `mvn clean package`. Confirm a jar file appears under `target/`.
+4. On your Linux Docker host, in `starter/`, run `mvn clean package`. Confirm a jar file appears
+   under `target/`.
 
 ### Part C — Write your own Dockerfile
 

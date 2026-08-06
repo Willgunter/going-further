@@ -17,6 +17,27 @@ By the end of this lab you will have:
 - A copy of [`app.log`](../../demos/03-linux-fundamentals/app.log) will already exist on the
   host at `~/sprint1/logs/app.log`
 
+## Connecting with VS Code Remote Development (optional, recommended)
+
+You can complete this lab from a plain SSH terminal (Windows Terminal, PowerShell, Git Bash, or
+your terminal of choice). If you'd rather work with a full editor against the remote host — and
+you'll want this for later labs that involve writing Dockerfiles and other files directly on the
+Linux host — set up VS Code's Remote Development extension now:
+
+1. Install the **Remote Development** extension pack in VS Code (includes **Remote - SSH**).
+2. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Remote-SSH: Connect to
+   Host...**
+3. Add a new host using the credentials your trainer gave you, e.g. `ssh
+   <username>@<host>`, and connect. VS Code will open a new window connected to the Linux host.
+4. Open a folder on the remote host (your home directory is a good default), and open a terminal
+   inside VS Code (`` Ctrl+` ``) — this terminal runs directly on the Linux host, exactly like an
+   SSH session would.
+
+From here on, any file you create or edit in that VS Code window lives on the Linux host itself,
+and any terminal commands you run execute there too. This is the pattern you'll reuse in the
+Docker labs later in the sprint: connect to your Linux machine, then build and run everything on
+it directly.
+
 ## Task sheet
 
 Work through each step on the shared Linux host. Keep a note of the command you used for each
