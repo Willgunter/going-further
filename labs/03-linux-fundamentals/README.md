@@ -28,15 +28,38 @@ Linux host — set up VS Code's Remote Development extension now:
 2. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Remote-SSH: Connect to
    Host...**
 3. Add a new host using the credentials your trainer gave you, e.g. `ssh
-   <username>@<host>`, and connect. VS Code will open a new window connected to the Linux host.
-4. Open a folder on the remote host (your home directory is a good default), and open a terminal
-   inside VS Code (`` Ctrl+` ``) — this terminal runs directly on the Linux host, exactly like an
-   SSH session would.
+   <username>@<host>`, and connect.
+   - **Watch for the password prompt.** VS Code doesn't pop up a normal dialog box for this — it
+     reuses the same small input box that the Command Palette itself uses, at the top-centre of
+     the window, titled something like `Enter password for '<username>@<host>'`. There's no
+     sound and no bold warning; if you're looking at the terminal panel or another app at that
+     moment, it's very easy to miss entirely. If the connection seems to hang for more than a
+     few seconds after you hit Enter, check the top-centre of the window before assuming
+     something's broken.
+   - Once authenticated, VS Code opens a **new window** connected to the Linux host — you can
+     tell you're in a remote window by the green `SSH: <host>` indicator in the bottom-left
+     corner.
+4. **Open a folder on the remote host** — this is different from just being connected. Being
+   connected (step 3) only gets you an empty remote window; you still need to explicitly open a
+   folder that lives on the Linux machine, the same way you'd open a local project folder:
+   - Use **File > Open Folder...** (or `Ctrl+K Ctrl+O`), which now shows a folder picker browsing
+     the **remote** filesystem, not your local one (your home directory, e.g. `/home/<username>`,
+     is a good default).
+   - **This step commonly triggers a second password prompt**, in the same easy-to-miss
+     top-centre input box as step 3. Opening a folder starts (or reconnects) the VS Code Server
+     process on the Linux host, which is a separate authentication step from the initial SSH
+     connection — so don't be surprised to be asked again even though you just logged in.
+5. Open a terminal inside VS Code (`` Ctrl+` ``) — this terminal runs directly on the Linux host,
+   exactly like an SSH session would.
 
 From here on, any file you create or edit in that VS Code window lives on the Linux host itself,
 and any terminal commands you run execute there too. This is the pattern you'll reuse in the
 Docker labs later in the sprint: connect to your Linux machine, then build and run everything on
 it directly.
+
+If a command seems to hang with no output — especially right after connecting or opening a
+folder — the most likely cause is a missed password prompt, not a broken connection. Check the
+top-centre of the window before troubleshooting anything else.
 
 ## Task sheet
 
