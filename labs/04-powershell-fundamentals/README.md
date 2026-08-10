@@ -65,3 +65,9 @@ for Java, Python, and web development later in the programme.
 
 If you finish early, try piping `Get-ChildItem -Recurse -File` into `Group-Object Extension` to
 see a breakdown of file types across all three sample projects.
+
+## Finished early?
+
+Try the extension exercises in [`going-further.md`](going-further.md) — they cover deeper
+pipeline chaining, `Select-String`, regular expressions, permissions/ACLs, and `Get-ChildItem`
+in more depth.

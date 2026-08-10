@@ -114,3 +114,8 @@ step.
 
 If you finish early, compare notes with a partner: did you use the same commands for step 4?
 There's often more than one valid way to do the same thing in Linux.
+
+## Finished early?
+
+Try the extension exercises in [`going-further.md`](going-further.md) — they cover piping,
+`grep`, regular expressions, permissions in more depth, and `find`.
