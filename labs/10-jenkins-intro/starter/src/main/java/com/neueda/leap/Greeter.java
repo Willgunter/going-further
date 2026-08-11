@@ -1,4 +1,4 @@
-package com.fidelity.leap;
+package com.neueda.leap;
 
 public class Greeter {
     public String greet(String name) {

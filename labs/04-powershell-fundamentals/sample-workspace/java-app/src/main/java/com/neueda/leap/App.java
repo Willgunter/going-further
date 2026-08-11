@@ -1,4 +1,4 @@
-package com.fidelity.leap;
+package com.neueda.leap;
 
 public class App {
     public static void main(String[] args) {
