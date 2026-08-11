@@ -7,6 +7,6 @@
 2026-08-18 09:04:10 INFO  [http-nio-8080] GET /health 200
 2026-08-18 09:05:55 ERROR [http-nio-8080] Unhandled exception in AccountController
 java.lang.NullPointerException: Cannot invoke "Account.getBalance()" because "account" is null
-	at com.fidelity.leap.AccountController.getBalance(AccountController.java:42)
+	at com.neueda.leap.AccountController.getBalance(AccountController.java:42)
 2026-08-18 09:06:02 INFO  [http-nio-8080] GET /health 200
 2026-08-18 09:07:30 INFO  [http-nio-8080] GET /health 200

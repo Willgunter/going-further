@@ -5,5 +5,5 @@
 2026-08-19 09:03:41 WARN  [http] Slow response for GET /accounts (912ms)
 2026-08-19 09:05:55 ERROR [http] Unhandled exception in AccountController
 java.lang.NullPointerException: Cannot invoke "Account.getBalance()" because "account" is null
-	at com.fidelity.leap.AccountController.getBalance(AccountController.java:42)
+	at com.neueda.leap.AccountController.getBalance(AccountController.java:42)
 2026-08-19 09:06:02 INFO  [http] GET /health 200

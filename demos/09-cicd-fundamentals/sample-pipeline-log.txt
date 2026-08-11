@@ -25,7 +25,7 @@ Running on jenkins-agent-01 in /var/jenkins_home/workspace/sprint1-demo-app
 [Pipeline] stage
 [Pipeline] { (Test)
 09:14:19  + mvn -B test
-09:14:20  [INFO] Running com.fidelity.leap.GreeterTest
+09:14:20  [INFO] Running com.neueda.leap.GreeterTest
 09:14:23  Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
 09:14:23  [INFO] BUILD SUCCESS
 [Pipeline] junit
