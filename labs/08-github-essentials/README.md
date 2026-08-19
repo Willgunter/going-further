@@ -72,3 +72,83 @@ Simulate two people using two local folders:
 
 If you finish early, explore the **Branches** view on github.com and compare it with `git
 branch -a` locally — do they show the same information?
+
+## Setting up GitHub credentials on Amazon Linux
+
+If you're also working from an Amazon Linux EC2 instance (e.g. the shared training host from
+[Module 03](../03-linux-fundamentals)), you'll need to authenticate to GitHub from there
+separately — credentials set up on your Windows machine don't carry over. The recommended
+approach is an SSH key pair, since it doesn't expire and works well on a headless host.
+
+### 1. Set your Git identity
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+### 2. Generate an SSH key on the Amazon Linux host
+
+```bash
+ssh-keygen -t ed25519 -C "you@example.com"
+```
+
+Press Enter to accept the default file location (`~/.ssh/id_ed25519`) and set a passphrase if
+you want one. Then start the SSH agent and add the key:
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+### 3. Add the public key to GitHub
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the output, then on github.com go to **Settings > SSH and GPG keys > New SSH key**, paste
+it in, and save.
+
+### 4. Test the connection
+
+```bash
+ssh -T git@github.com
+```
+
+You should see a message confirming you've authenticated as your GitHub username.
+
+### 5. Use SSH remote URLs
+
+When adding a remote or cloning on the Amazon Linux host, use the SSH form of the URL rather
+than HTTPS:
+
+```bash
+git remote add origin git@github.com:your-org/your-repo.git
+```
+
+If you already added an `https://` remote, switch it with:
+
+```bash
+git remote set-url origin git@github.com:your-org/your-repo.git
+```
+
+### Alternative: HTTPS with a personal access token
+
+If SSH traffic is blocked on your network, use HTTPS instead. Generate a token at
+**github.com > Settings > Developer settings > Personal access tokens**, then run:
+
+```bash
+git config --global credential.helper store
+```
+
+The next time you `git push` or `git pull` over HTTPS, enter your GitHub username and the token
+as the password. `credential.helper store` caches it in `~/.git-credentials` so you won't be
+asked again on that host.
+
+### Repeat on Windows if needed
+
+The same steps work in Git Bash on Windows — the commands are identical. If you already
+authenticated to GitHub on Windows via the GitHub CLI, GitHub Desktop, or Git Credential
+Manager, you don't need to redo this section there; it's only required for hosts that don't
+already have working credentials.
