@@ -12,6 +12,10 @@ By the end of this lab you will have:
 ## Setup
 
 - Access to the Sprint 1 Jenkins instance
+- Maven 3 configured as a tool in Jenkins (**Manage Jenkins > Tools > Maven installations > Add
+  Maven**, name it `Maven3`, and let Jenkins install it automatically). This only needs doing
+  once per Jenkins instance, ask your trainer if it's already set up. The name must be exactly
+  `Maven3` to match the `tools` block in the [`Jenkinsfile`](starter/Jenkinsfile).
 - Your own Pipeline job in Jenkins, pointing at your own copy of the
   [`starter/`](starter) project from this lab, pushed to your GitHub repository from Module 08
 - GitHub Copilot Chat available in IntelliJ
