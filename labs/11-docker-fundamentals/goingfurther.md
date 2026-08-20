@@ -23,7 +23,7 @@ and a runtime stage (same base you already used) that copies *only* the jar out 
 with `COPY --from=`. Once it's building, compare `docker images` output against your original
 single-stage image and check the size difference actually shows up.
 
-## 2. Shrink the image further
+## 2. Shrink the image further (not done)
 
 Try swapping the runtime base image for a "distroless" one (e.g. `gcr.io/distroless/java21-debian12`)
 and compare sizes again.
@@ -32,7 +32,7 @@ and compare sizes again.
 from this image afterwards and see what happens. Think about why that trade-off might or might not
 matter for a production image versus one you need to debug.
 
-## 3. Add a HEALTHCHECK
+## 3. Add a HEALTHCHECK (done)
 
 Right now `docker ps` only tells you the container is *running*, not whether the app inside is
 actually OK.
