@@ -11,12 +11,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn -B clean package'
+                dir('labs/10-jenkins-intro/starter') {
+                    sh 'mvn -B clean package'
+                }
+                     
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn -B test'
+                dir('labs/10-jenkins-intro/starter') {
+                    sh 'mvn -B test'
+                }
             }
             post {
                 always {
