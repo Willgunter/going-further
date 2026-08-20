@@ -11,7 +11,7 @@ public class Main {
 
         String env_greeting = System.getenv(env);
 
-        if (env_greeting == null) {
+        if (env_greeting != null) {
             Greeter greeter = new Greeter();
             System.out.println(greeter.greet(env_greeting));
         }
