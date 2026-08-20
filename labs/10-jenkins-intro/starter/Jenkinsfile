@@ -32,9 +32,11 @@ pipeline {
             }
         }
         stage('Archive') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-                archiveArtifacts artifacts: 'target/site/jacoco/**', fingerprint: false
+            steps { 
+                dir('labs/10-jenkins-intro/starter') {
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                    archiveArtifacts artifacts: 'target/site/jacoco/**', fingerprint: false
+                }
             }
         }
     }
